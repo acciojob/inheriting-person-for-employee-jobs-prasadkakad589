@@ -4,7 +4,9 @@ function Person(name, age) {
 }
 
 Person.prototype.greet = function () {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+  console.log(
+    `Hello, my name is ${this.name} and I am ${this.age} years old.`
+  );
 };
 
 function Employee(name, age, jobTitle) {
@@ -12,7 +14,7 @@ function Employee(name, age, jobTitle) {
   this.jobTitle = jobTitle;
 }
 
-// Inherit Person prototype
+// Inherit from Person
 Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee;
 
